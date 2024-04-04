@@ -32,13 +32,16 @@ We use this categorical data encoding technique when the features are nominal(do
 
 # CODING AND OUTPUT:
        # INCLUDE YOUR CODING AND OUTPUT SCREENSHOTS HERE
+#### Name : KALPANA S
+#### Ref No : 212222040069
 ```
 import pandas as pd
 df=pd.read_csv("/content/Encoding Data.csv")
 df
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/765aef66-e448-4589-bdb4-713061923e9b)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/fc676205-cd41-4ff1-810c-05ed1174f896)
+
 
 ```
 from sklearn.preprocessing import LabelEncoder,OrdinalEncoder
@@ -47,7 +50,8 @@ e1=OrdinalEncoder(categories=[pm])
 e1.fit_transform(df[["ord_2"]])
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/540fb927-b65b-421f-b387-72066567fa5a)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/ba618cc9-5b48-41af-9889-29bc41cbd6e2)
+
 
 
 ```
@@ -55,7 +59,8 @@ df['bo2']=e1.fit_transform(df[["ord_2"]])
 df
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/df28587f-799f-443c-ba96-e46b6a50e7b9)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/417caa73-1322-4a56-af81-736a4ec8c189)
+
 
 ```
 le=LabelEncoder()
@@ -63,7 +68,8 @@ dfc=df.copy()
 dfc['ord_2']=le.fit_transform(dfc['ord_2'])
 dfc
 ```
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/ea6bee98-a286-4398-81bb-5d0a6529812f)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/04885d62-50c1-480f-ae3c-08568172374b)
+
 
 ```
 from sklearn.preprocessing import OneHotEncoder
@@ -72,25 +78,28 @@ df2=df.copy()
 enc=pd.DataFrame(ohe.fit_transform(df2[["nom_0"]]))
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/902de21e-df37-4c5f-bebb-4f26fff3bc8c)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/cfb922c7-8494-45b8-9519-f54999ddf17c)
+
 
 ```
 df2=pd.concat([df2,enc],axis=1)
 df2
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/bb46fb33-9d91-4bce-8ab5-25eacd62abfc)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/aebf1256-0f49-4149-a76e-b9ebc5abaf4e)
+
 
 ```
 pd.get_dummies(df2,columns=["nom_0"])
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/8cceee9b-d4ce-4fc1-9da6-6f7a169e60ae)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/ef88024e-a579-4714-a779-c2dbd75b0c78)
+
 
 ```
 pip install --upgrade category_encoders
 ```
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/8e9aa278-d264-46b7-8135-4aaaef4c26c8)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/88f2d99c-315a-4508-bf7a-60c5374a5f43)
 
 
 ```
@@ -99,7 +108,8 @@ df=pd.read_csv("/content/data.csv")
 df
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/2a47bd12-d412-43d1-8dda-0dd8f85da92a)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/cd6feeee-00ce-45a9-8c28-eba07e86ae1f)
+
 
 
 ```
@@ -108,7 +118,8 @@ nd=be.fit_transform(df['Ord_2'])
 df
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/d20bcb03-feb0-45e2-9750-39f2cdc1b0ec)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/f10f049c-304e-448e-a96a-152250170dac)
+
 
 
 ```
@@ -116,7 +127,8 @@ dfb=pd.concat([df,nd],axis=1)
 dfb
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/ec4ab0aa-31ae-4ee1-bb76-94979c247cd2)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/91e5344c-cf6c-49d4-96a1-e73237284876)
+
 
 
 ```
@@ -128,7 +140,8 @@ CC=pd.concat([CC,new],axis=1)
 CC
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/1dc0652b-50c1-4036-9998-f09478b5d62c)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/5ed64258-82ff-49c3-af58-3c85e080cdbb)
+
 
 
 ```
@@ -139,39 +152,42 @@ df=pd.read_csv("/content/Data_to_Transform.csv")
 df
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/b04502e8-d026-4ee0-b9e7-7ad033364763)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/12ffaa4e-0b91-41f0-8181-a390f9fce9da)
 
 
 ```
 df.skew()
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/4a039b4d-54e5-4966-8fa9-cd68f2d70eee)
-
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/0e96b64f-1f2e-471c-b21a-31e26a7ddb60)
 
 ```
 np.log(df["Highly Positive Skew"])
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/c329a4c1-e6a6-41ce-a03b-b04383c913ff)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/25cdc061-2dbe-47c8-b862-954b0590efa6)
+
 
 ```
 np.reciprocal(df["Moderate Positive Skew"])
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/1f266014-eca7-4c22-8dfb-eb1ce778d379)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/d7c0016f-f32b-45c0-b333-85d77f32f72b)
 
 ```
 np.sqrt(df["Highly Positive Skew"])
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/ed6d6bc1-2e8c-4a37-b5d2-5b3162950e7c)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/a89535c9-9890-4a3e-bffe-407f6f4d4c78)
+
 
 ```
 np.square(df["Highly Positive Skew"])
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/55a2c46c-4f00-47d8-8e30-b9189b84dca9)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/5d07851a-e341-4ef2-a986-68a7041463ab)
+
+
 
 
 ```
@@ -179,21 +195,24 @@ df["Highly Positive Skew_boxcox"], parameters=stats.boxcox(df["Highly Positive S
 df
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/356a427c-ab39-4893-ac06-d81969485f88)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/a2f5ed85-7912-4fd5-a838-f0b3201a4819)
+
 
 
 ```
 df.skew()
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/862a1998-0eae-457c-aefe-01832c6a992b)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/3f0bb160-0e71-437a-bf84-79ffb0587dfd)
+
 
 
 ```
 df["Highly Negative Skew_yeojohnson"],parameters=stats.yeojohnson(df["Highly Negative Skew"])
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/c39c6ba0-f7ed-4565-bc7b-6e71932ce09c)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/1f99f9df-9f41-4f38-bde7-b2a958feea93)
+
 
 
 ```
@@ -204,7 +223,8 @@ sm.qqplot(df["Moderate Negative Skew"],line='45')
 plt.show()
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/4fad9e73-8a18-44f7-8453-6b6ba7b65a5f)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/a60963a1-00a1-4de1-ac82-a6d10ce457a7)
+
 
 
 ```
@@ -212,7 +232,8 @@ sm.qqplot(np.reciprocal(df["Moderate Negative Skew"]),line='45')
 plt.show()
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/7ffb49c3-5df5-4872-bd54-672c3789dc44)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/e8fa66cb-ff78-496c-bb69-0d904fe9a69e)
+
 
 ```
 from sklearn.preprocessing import QuantileTransformer
@@ -224,7 +245,8 @@ sm.qqplot(df["Moderate Negative Skew"],line='45')
 plt.show()
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/c7d671c2-7546-41c5-8f54-33c0cdab9276)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/f90300da-5c31-4136-a0a2-03b7c5af95c5)
+
 
 
 ```
@@ -233,7 +255,8 @@ sm.qqplot(df["Highly Negative Skew"],line='45')
 plt.show()
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/10f4c41a-5741-452e-ab0b-d6c02b139f5f)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/9249ebcf-fe7b-4699-adde-8bf7e89def8e)
+
 
 
 ```
@@ -241,7 +264,7 @@ sm.qqplot(df["Highly Negative Skew_1"],line='45')
 plt.show()
 ```
 
-![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/6d118c01-e4a3-4ee6-b31e-8b688d00d10e)
+![image](https://github.com/Kalpanareshma/EXNO-3-DS/assets/122040453/90325656-017f-4082-8eb7-ed129a86a289)
 
 
 
