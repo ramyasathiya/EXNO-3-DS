@@ -31,7 +31,6 @@ We use this categorical data encoding technique when the features are nominal(do
 • Yeojohnson method
 
 # CODING AND OUTPUT:
-       # INCLUDE YOUR CODING AND OUTPUT SCREENSHOTS HERE
 #### Name : KALPANA S
 #### Ref No : 212222040069
 ```
